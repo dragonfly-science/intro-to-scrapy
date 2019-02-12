@@ -10,5 +10,5 @@ export RUN=
 make slides
 
 # Send output
-cp deepspeech.html /output
-cp deepspeech.html /publish/index.html
+cp babynames/babynames.csv /output
+cp intro-to-scrapy.html /publish/index.html
