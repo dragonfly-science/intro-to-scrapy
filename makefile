@@ -10,7 +10,7 @@ slides:	clean_slides intro-to-scrapy.html
 crawl: clean_babynames babynames/babynames.csv
 
 babynames/babynames.csv:
-	cd $(dir $@) && $(RUN) scrapy crawl huggies -o $(notdir $@) --logfile $(dir $@)babynames.log
+	cd $(dir $@) && $(RUN) scrapy crawl huggies -o $(notdir $@) --logfile babynames.log
 
 intro-to-scrapy.html: intro-to-scrapy.Rmd babynames/babynames.csv
 	$(RUN) Rscript -e 'rmarkdown::render("intro-to-scrapy.Rmd")'
