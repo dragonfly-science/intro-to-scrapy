@@ -23,15 +23,8 @@ knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning=FALSE)
 
 ```{r}
 library(tidyverse)
-library(gghighlight)
-library(reports)
 library(kableExtra)
 library(reticulate)
-
-library(png)
-library(jpeg)
-library(grid)
-library(gridExtra)
 ```
 
 ## Overview
@@ -54,7 +47,7 @@ Scrapy is a python library for web scraping with heaps of useful functionality
 
 ## Turn this..
 
-```{r fig.align='center'}
+```{r fig.align='center', out.width=650}
 knitr::include_graphics("images/trademe-rental.png")
 ```
 
@@ -72,7 +65,7 @@ auckland_flatmates %>%
 
 ## Or this..
 
-```{r fig.align='center'}
+```{r fig.align='center', out.width=650}
 knitr::include_graphics("images/lotto-results.png")
 ```
 
@@ -100,7 +93,7 @@ knitr::include_graphics("images/lotto-results.png")
 
 We want to collect a list of babynames from [huggies.co.nz](http://huggies.co.nz/baby-names)
 
-```{r fig.align='center'}
+```{r fig.align='center', out.width=650}
 knitr::include_graphics("images/baby-names.png")
 ```
 
@@ -192,7 +185,7 @@ The `spiders/` folder is where the web scrapers you write are placed
 
 ## Settings.py
 
-```{python echo=TRUE}
+```{python3 echo=TRUE}
 BOT_NAME = 'babynames'
 
 SPIDER_MODULES = ['babynames.spiders']
