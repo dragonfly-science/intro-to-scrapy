@@ -563,9 +563,9 @@ head babynames/babynames.csv
 
 ```{r}
 sample_size <- 15
-random_boys   <- sort(sample(babynames[babynames$gender == "boy",    ][[1]], sample_size))
-random_girls  <- sort(sample(babynames[babynames$gender == "girl",   ][[1]], sample_size))
-random_unisex <- sort(sample(babynames[babynames$gender == "unisex", ][[1]], sample_size))
+random_boys   <- sort(sample(babynames[babynames$gender == "boy",    ], sample_size))
+random_girls  <- sort(sample(babynames[babynames$gender == "girl",   ], sample_size))
+random_unisex <- sort(sample(babynames[babynames$gender == "unisex", ], sample_size))
 ```
 
 Here are `r sample_size` random boy names:
