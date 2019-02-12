@@ -30,8 +30,9 @@ library(reticulate)
 ## Overview
 
 - Motivation
-- Baby names
 - Stuff you should know
+- Scraping baby names with scrapy
+- The results
 
 # Motivation
 
