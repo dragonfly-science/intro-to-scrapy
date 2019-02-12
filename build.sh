@@ -10,5 +10,5 @@ export RUN=
 make slides
 
 # Send output
-cp babynames/babynames.csv /output
+cp babynames/babynames.csv babynames/babynames.log /output
 cp intro-to-scrapy.html /publish/index.html
