@@ -17,9 +17,11 @@ class HuggiesSpider(scrapy.Spider):
             yield scrapy.Request(next_page, callback = self.parse_page)
 
     def parse_page(self, response):
+        # Get the baby names
         name_xpath = '//table/tbody/tr/td[@class="name"]/a/text()'
         names = response.xpath(name_xpath).extract()
 
+        # Get the gender for each name
         gender_xpath = '//table/tbody/tr/td[@class="gender"]/span/text()'
         genders = response.xpath(gender_xpath).extract()
 

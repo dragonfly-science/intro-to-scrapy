@@ -547,6 +547,15 @@ Scrapy logs are very verbose, but they'll help you debug if there are any issues
 knitr::include_graphics("images/scrapy-logs.png")
 ```
 
+## The code
+
+All of the work was done with just 30 lines of code
+
+```{r fig.align='center', out.width = "700px"}
+knitr::include_graphics("images/huggies-py.png")
+```
+
+
 ## The results
 
 ```{r}
