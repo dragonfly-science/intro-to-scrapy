@@ -102,3 +102,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+.Rproj.user
+babynames/babynames.csv
+intro-to-scrapy.html

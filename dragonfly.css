@@ -1,0 +1,49 @@
+aside.gdbar img {
+  width: 300px;
+  height: 60px;
+}
+
+aside.gdbar {
+  height: 80px;
+  width: 350px;
+}
+
+slides > slide:not(.nobackground):before {
+  font-size: 12pt;
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 60px;
+  background: url(images/dragonfly-wing-only-blue.png) no-repeat 0 50%;
+  background-size: 60px 40px;
+  padding-left: 60px;
+  height: 50px;
+  line-height: 1.9;
+  z-index: -1;
+}
+
+.fullslide img {
+  margin-top: -85px;
+  margin-left: -60px;
+  z-index: 999; 
+  position: relative;
+}
+
+thead {
+  background-color: #1D98C4
+}
+
+table thead th {
+  color: white;
+  font-size:10pt;
+}
+
+q, blockquote {
+    quotes: none;
+    font: 22px normal helvetica, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    padding-left: 15px;
+    border-left: 3px solid #ccc;
+}

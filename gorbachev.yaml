@@ -1,0 +1,2 @@
+docker: docker.dragonfly.co.nz/intro-to-scrapy:31dafe6
+publish: intro-to-scrapy
