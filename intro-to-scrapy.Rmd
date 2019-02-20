@@ -337,7 +337,7 @@ knitr::include_graphics("images/baby-names-list-a.png")
 
 ## Getting the page urls
 
-Often we want spider to traverse the website page by page
+Often we want a spider to traverse the website page by page
 
 To do this, we need to extract the links to any pages we want to visit first before we start extracting any data
 
@@ -543,7 +543,7 @@ Scrapy logs are very verbose, but they'll help you debug if there are any issues
 knitr::include_graphics("images/scrapy-logs.png")
 ```
 
-## The code
+## babynames/spiders/huggies.py
 
 All of the work was done with just 30 lines of code
 
