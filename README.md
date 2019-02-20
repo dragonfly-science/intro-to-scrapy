@@ -9,7 +9,7 @@ Please note that this licence does not apply to any logos, emblems and trade mar
 
 Copyright of those specific items may not be held by Dragonfly Limited. Unless indicated otherwise, those specific items may not be re-used without express permission.
 
-# How to run this repo
+# How to run this repo on Linux or Mac
 
 This repo is set up to run in a reproducible way using `make` and `docker`.
 
