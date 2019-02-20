@@ -5,6 +5,10 @@ This repo provides examples of how to use the `scrapy` module to scrape data onl
 - A concrete example (with code!) of how to scrape babynames from `huggies.co.nz`
 - Lecture slides with explanations of how the code works
 
+## I wanna see the slides
+
+The slides are available online here: https://gorbachev.io/site/dragonfly-science/intro-to-scrapy
+
 ## Open code
 
 You are welcome to fork this repository and use it as a basis for your own projects. Text content and code on this website are copyright Dragonfly Limited but are licenced for re-use under a [Creative Commons International Attribution 4.0 licence](https://creativecommons.org/licenses/by/4.0/) (see [LICENSE](https://github.com/dragonfly-science/intro-to-scrapy/blob/master/LICENSE) for terms and conditions). 
