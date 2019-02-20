@@ -1,6 +1,14 @@
 # intro-to-scrapy
 Introduction to web scraping using the `scrapy` module
 
+## Open code
+
+You are welcome to fork this repository and use it as a basis for your own projects. Text content and code on this website are copyright Dragonfly Limited but are licenced for re-use under a [Creative Commons International Attribution 4.0 licence](https://creativecommons.org/licenses/by/4.0/) (see [LICENSE](https://github.com/dragonfly-science/website/blob/master/LICENSE) for terms and conditions). 
+
+Please note that this licence does not apply to any logos, emblems and trade marks on the website or to the website’s design elements or to any photography, imagery, or publications.
+
+Copyright of those specific items may not be held by Dragonfly Limited. Unless indicated otherwise, those specific items may not be re-used without express permission.
+
 # How to run this repo
 
 This repo is set up to run in a reproducible way using `make` and `docker`.
@@ -60,4 +68,4 @@ from the `R` command line, or open `intro-to-scrapy.Rmd` from RStudio and knit t
 
 # Any issues?
 
-I'll be happy to take issue requests, esp. if these instructions prove unhelpful.
+You are welcome to report any issues with the website, through [GitHub](https://github.com/dragonfly-science/website/issues). If you really enjoy fixing other peoples' stuff, pull requests would also be appreciated!
