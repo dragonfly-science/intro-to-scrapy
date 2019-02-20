@@ -36,7 +36,7 @@ library(reticulate)
 
 # Motivation
 
-## What the heck is..
+## What the heck is
 
 ### **Web Scraping?**
 
@@ -46,13 +46,13 @@ Web scraping is the practice of extracting data directly from websites online
 
 Scrapy is a python library for web scraping with heaps of useful functionality
 
-## Turn this..
+## Turn this
 
 ```{r fig.align='center', out.width=650}
 knitr::include_graphics("images/trademe-rental.png")
 ```
 
-## Into this..
+## Into this
 
 ```{r}
 auckland_flatmates <- read_csv("data/flatmates.csv")
@@ -64,13 +64,13 @@ auckland_flatmates %>%
   scroll_box(width = "750px")
 ```
 
-## Or this..
+## Or this
 
 ```{r fig.align='center', out.width=650}
 knitr::include_graphics("images/lotto-results.png")
 ```
 
-## Into this..
+## Into this
 
 ```{}
 { "date": "06-february-2019",
@@ -104,8 +104,8 @@ knitr::include_graphics("images/baby-names.png")
 
 - If there is a public API, use it instead
 - Always provide a User Agent string
-- Request data at a reasonable rate. Never be confused for a DDoS attack
-- Only save the data you need from the page
+- Request data at a reasonable rate
+- Only save the data you need
 - Respect any content you keep, don't pass it off as your own
 - Look for ways to return value to the site owner
 - Credit the site owner in any article or posts you make
@@ -116,7 +116,7 @@ Read more [here](https://towardsdatascience.com/ethics-in-web-scraping-b96b18136
 
 ## Robots.txt
 
-`robots.txt` is a text file site owners create to instruct bots (typically search engine robots) how to crawl pages on their website.
+`robots.txt` is a text file site owners create to instruct bots (typically search engine robots) how to crawl pages on their website
 
 [huggies.co.nz/robots.txt](http://huggies.co.nz/robots.txt) looks like this:
 
@@ -134,10 +134,10 @@ This means we are allowed to scrapy the domain [huggies.co.nz/baby-names](http:/
 ## Robots.txt
 
 Most websites have a `robots.txt`, usually it's worth checking out to get a sense of the site owners attitude 
-towards web scrapers. Some websites are more strict than others.
+towards web scrapers. Some websites are more strict than others
 
-Scrapy will automatically get and enforce any rules on a sites `robots.txt`, so you don't need to think about it.
-This is not the case with `BeautifulSoup`.
+Scrapy will automatically get and enforce any rules on a sites `robots.txt`, so you don't need to think about it
+This is not the case with `BeautifulSoup`
 
 # Starting with Scrapy
 
@@ -202,10 +202,9 @@ ROBOTSTXT_OBEY = True
 CONCURRENT_REQUESTS = 4
 
 # Configure a delay for requests for the same website (default: 0)
-# See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
-# See also autothrottle settings and docs
 DOWNLOAD_DELAY = 3
-# ... and more ...
+
+# ... and more ....
 ```
 
 ## Create a spider
@@ -279,7 +278,7 @@ shell by running:
 ```
 scrapy shell huggies.co.nz/baby-names/a
 
-# .. A bunch of logs here ...
+# ... A bunch of logs here ...
 # [s] Available Scrapy objects:
 # [s]   scrapy     scrapy module (contains scrapy.Request, scrapy.Selector, etc)
 # [s]   crawler    <scrapy.crawler.Crawler object at 0x7fb5ebbe1898>
@@ -295,7 +294,7 @@ scrapy shell huggies.co.nz/baby-names/a
 ## Start developing
 
 From inside the scrapy shell, you can see everything that your spider can see on the website and test code that will be 
-migrated to `huggies.py` when it works.
+migrated to `huggies.py` when it works
 
 Usually the goal is to handle the `response` object so as to get either:
 
@@ -338,15 +337,15 @@ knitr::include_graphics("images/baby-names-list-a.png")
 
 ## Getting the page urls
 
-Often we want spider to traverse the website page by page.
+Often we want spider to traverse the website page by page
 
-To do this, we need to extract the links to any pages we want to visit first before we start extracting any data.
+To do this, we need to extract the links to any pages we want to visit first before we start extracting any data
 
 We use the 'inspect element' tool on our browser to find the xpath for each of the elements that we want 
-to scrape from the page.
+to scrape from the page
 
 Usually the xpath you get from the browser requires some modification before it will get exactly what you
-need. This takes some practice, but you can use trial and error in the scrapy shell to test what works.
+need. This takes some practice, but you can use trial and error in the scrapy shell to test what works
 
 ## Getting the page urls
 
@@ -358,7 +357,7 @@ First we grab the first xpath we can from the website
 ['<a rel="next" href="/baby-names/a?page=2">2</a>']
 ```
 
-We can truncate the xpath on the left to make the code easier to read, so long as we start the xpath with `'//'`.
+We can truncate the xpath on the left to make the code easier to read, so long as we start the xpath with `'//'`
 And we can also select a `<div>` tag by class using xpath as follows:
 
 ```
@@ -369,7 +368,7 @@ And we can also select a `<div>` tag by class using xpath as follows:
 
 ## Getting the page urls
 
-Then we can replace `a[1]` with just `a` to get all of the `a` tags under the pagination div.
+Then we can replace `a[1]` with just `a` to get all of the `a` tags under the pagination div
 
 ```
 >>> page_xpath = '//div[@class="pagination"]/a'
@@ -410,7 +409,7 @@ Then we can extract the `href` from within the `<a>` tag like below:
 ## Parsing all pages
 
 Now we're ready to write the `parse` method in `huggies.py`. The goal of `parse` is simple, to get each page url and pass
-it forward to `parse_page`, which will parse each individual page.
+it forward to `parse_page`, which will parse each individual page
 
 ```{python3 echo=TRUE}
 def parse(self, response):
@@ -420,7 +419,7 @@ def parse(self, response):
 ## Parsing all pages
 
 Now we're ready to write the `parse` method in `huggies.py`. The goal of `parse` is simple, to get each page url and pass
-it forward to `parse_page`, which will parse each individual page.
+it forward to `parse_page`, which will parse each individual page
 
 ```{python3 echo=TRUE}
 def parse(self, response):
@@ -460,7 +459,7 @@ Then we truncate the xpath on the left to make it simpler
 ## Getting the baby names
 
 We replace the `td[1]` entry with `td[@class="name"]` so we get all `<td>` tags with a 
-`class` of `"name"`, instead of just the first element.
+`class` of `"name"`, instead of just the first element
 
 ```
 >>> name_xpath = '//table/tbody/tr[1]/td[@class="name"]/a/text()'
@@ -469,11 +468,11 @@ We replace the `td[1]` entry with `td[@class="name"]` so we get all `<td>` tags 
 ```
 
 Note that this doesn't change the output, because the target is the same. We're just referring to the tags we want
-by class instead of by index.
+by class instead of by index
 
 ## Getting the baby names
 
-We can replace the `tr[1]` entry with just `tr` to get all of the names, and not just the first one.
+We can replace the `tr[1]` entry with just `tr` to get all of the names, and not just the first one
 
 ```
 >>> name_xpath = '//table/tbody/tr/td[@class="name"]/a'
@@ -538,7 +537,7 @@ scrapy crawl huggies -o babynames.csv
 
 ## Finally, we crawl!
 
-Scrapy logs are very verbose, but they'll help you debug if there are any issues.
+Scrapy logs are very verbose, but they'll help you debug if there are any issues
 
 ```{r fig.align='center', out.width = "700px"}
 knitr::include_graphics("images/scrapy-logs.png")
