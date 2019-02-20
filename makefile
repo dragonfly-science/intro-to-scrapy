@@ -7,7 +7,7 @@ GID ?= $(shell id -g)
 .PHONY: slides
 slides:	clean_slides intro-to-scrapy.html
 
-crawl: clean_babynames babynames/babynames.csv
+crawl: babynames/babynames.csv
 
 babynames/babynames.csv:
 	cd $(dir $@) && $(RUN) scrapy crawl huggies -o $(notdir $@) --logfile babynames.log
