@@ -43,7 +43,7 @@ You can install `scrapy` with:
 pip install scrapy
 ```
 
-(As per usual, running python code in a virtualenv is recommended but the only python dependency of this repo is on scrapy so make your best decision)
+(As per usual, running python code in a virtualenv is recommended but the only python dependency of this repo is on `scrapy` so make your best decision)
 
 Then once you have `scrapy` installed, from the `babynames` directory, run the following:
 
@@ -76,4 +76,4 @@ from the `R` command line, or open `intro-to-scrapy.Rmd` from RStudio and knit t
 
 ## Any issues?
 
-You are welcome to report any issues with the website, through [GitHub](https://github.com/dragonfly-science/website/issues). If you really enjoy fixing other peoples' stuff, pull requests would also be appreciated!
+You are welcome to report any issues with the repo, through [GitHub](https://github.com/dragonfly-science/intro-to-scrapy/issues). If you really enjoy fixing other peoples' stuff, pull requests would also be appreciated!
